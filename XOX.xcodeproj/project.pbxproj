@@ -15,6 +15,8 @@
 		C05136491E8D7A2300F84FE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05136471E8D7A2300F84FE5 /* LaunchScreen.storyboard */; };
 		C05136541E8D7A2300F84FE5 /* XOXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C05136531E8D7A2300F84FE5 /* XOXTests.m */; };
 		C051365F1E8D7A2300F84FE5 /* XOXUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C051365E1E8D7A2300F84FE5 /* XOXUITests.m */; };
+		C051366E1E8D8D5700F84FE5 /* oicon.png in Resources */ = {isa = PBXBuildFile; fileRef = C051366C1E8D8D5700F84FE5 /* oicon.png */; };
+		C051366F1E8D8D5700F84FE5 /* xicon.png in Resources */ = {isa = PBXBuildFile; fileRef = C051366D1E8D8D5700F84FE5 /* xicon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		C051365A1E8D7A2300F84FE5 /* XOXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XOXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C051365E1E8D7A2300F84FE5 /* XOXUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XOXUITests.m; sourceTree = "<group>"; };
 		C05136601E8D7A2300F84FE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C051366C1E8D8D5700F84FE5 /* oicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oicon.png; sourceTree = "<group>"; };
+		C051366D1E8D8D5700F84FE5 /* xicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xicon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		C05136381E8D7A2300F84FE5 /* XOX */ = {
 			isa = PBXGroup;
 			children = (
+				C051366C1E8D8D5700F84FE5 /* oicon.png */,
+				C051366D1E8D8D5700F84FE5 /* xicon.png */,
 				C051363C1E8D7A2300F84FE5 /* AppDelegate.h */,
 				C051363D1E8D7A2300F84FE5 /* AppDelegate.m */,
 				C051363F1E8D7A2300F84FE5 /* ViewController.h */,
@@ -249,8 +255,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C051366E1E8D8D5700F84FE5 /* oicon.png in Resources */,
 				C05136491E8D7A2300F84FE5 /* LaunchScreen.storyboard in Resources */,
 				C05136461E8D7A2300F84FE5 /* Assets.xcassets in Resources */,
+				C051366F1E8D8D5700F84FE5 /* xicon.png in Resources */,
 				C05136441E8D7A2300F84FE5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

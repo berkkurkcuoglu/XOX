@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property(strong,nonatomic) IBOutletCollection(UIImageView) NSArray *cells;
+@property (nonatomic) NSInteger turn;
 
 @end
 
