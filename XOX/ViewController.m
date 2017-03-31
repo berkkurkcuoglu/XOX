@@ -17,34 +17,51 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    for(UIImageView *cell in _cells){
+    /*for(UIImageView *cell in _cells){
         [cell setImage:[UIImage imageNamed:@"xicon.png"]];
-    }
+    }*/
+    _turn = 0;
+    [self start];
 }
 
-
+-(void) start{
+    _cellValues = [[NSMutableArray alloc] init];
+    for(int i =0; i < 9; i++){       
+        [_cellValues addObject:[NSNumber numberWithInteger:-1]];
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)tapped1:(id)sender {
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    CGPoint location = [touch locationInView:touch.view];
+    //NSLog(@"X location: %f", location.x);
+    //NSLog(@"Y Location: %f",location.y);
+    for(UIImageView *cell in _cells){
+        if(CGRectContainsPoint([cell frame], location) && [[_cellValues objectAtIndex:[_cells indexOfObject:cell]] isEqualToValue:[NSNumber numberWithInteger:-1]]){
+            if(_turn == 0){
+                [cell setImage:[UIImage imageNamed:@"xicon.png"]];
+                [_cellValues replaceObjectAtIndex:[_cells indexOfObject:cell] withObject:[NSNumber numberWithInteger:0]];
+                _turn = 1;
+            }
+            else{
+                [cell setImage:[UIImage imageNamed:@"oicon.png"]];
+                [_cellValues replaceObjectAtIndex:[_cells indexOfObject:cell] withObject:[NSNumber numberWithInteger:1]];
+                _turn = 0;
+            }
+        }
+    }
+    [self checkEnd];
 }
-- (IBAction)tapped2:(id)sender {
+
+-(void) checkEnd{
+    
 }
-- (IBAction)tapped3:(id)sender {
-}
-- (IBAction)tapped4:(id)sender {
-}
-- (IBAction)tapped5:(id)sender {
-}
-- (IBAction)tapped6:(id)sender {
-}
-- (IBAction)tapped7:(id)sender {
-}
-- (IBAction)tapped8:(id)sender {
-}
-- (IBAction)tapped9:(id)sender {
-}
+
+
 
 @end
