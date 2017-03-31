@@ -67,8 +67,8 @@
                 [_cellValues replaceObjectAtIndex:[_cells indexOfObject:cell] withObject:[NSNumber numberWithInteger:1]];
                 _turn = 0;
             }
+            [self checkEnd];
         }
-        [self checkEnd];
     }    
 }
 
